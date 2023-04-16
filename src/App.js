@@ -2,6 +2,7 @@
 import './App.css';
 
 import Card from './components/Card';
+import Newproduct from './components/Newproduct';
 
 function App() {
     const products =[
@@ -34,9 +35,14 @@ function App() {
         },
     ];
 
+     function newProd(productData){
+      console.log('This is app.js');
+        console.log(productData);
+     }
+
   return (
     <div className="App">
-
+        <Newproduct newProd={newProd} />
         <Card items={products}>  </Card>
                 
     </div>
